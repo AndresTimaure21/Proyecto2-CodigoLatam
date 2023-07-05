@@ -13,7 +13,7 @@ body {
 }
 
 .fondo {
-  background: url("/img/fondo\ dia.png");
+  background: url("./img/fondo\ dia.png");
 }
 
 /* Panel de navegación */
@@ -297,12 +297,12 @@ a:hover {
 
 .icono-luna {
   left: 3px;
-  background-image: url("/img/luna.png");
+  background-image: url("./img/luna.png");
 }
 
 .icono-sol {
   right: 3px;
-  background-image: url("/img/sol.png");
+  background-image: url("./img/sol.png");
   transform: translateX(100%);
 }
 
@@ -332,12 +332,12 @@ a:hover {
 
 .icono-luna {
   left: 3px;
-  background-image: url("/img/luna.png");
+  background-image: url("./img/luna.png");
 }
 
 .icono-sol {
   right: 3px;
-  background-image: url("/img/sol.png");
+  background-image: url("./img/sol.png");
   transform: translateX(100%);
 }
 
@@ -354,7 +354,7 @@ a:hover {
 /* Estilos para el modo nocturno */
 
 .modo-nocturno {
-  background: url("/img/fondo\ noche.png");
+  background: url("./img/fondo\ noche.png");
   color: #fff; /* Texto blanco */
 }
 
