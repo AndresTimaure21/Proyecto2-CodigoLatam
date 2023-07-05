@@ -1,0 +1,414 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 5%;
+  font-size: 1em;
+}
+
+.fondo {
+  background: url("/img/fondo\ dia.png");
+}
+
+/* Panel de navegación */
+nav {
+  background: #008CBA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 6.25em;
+  max-width: 100%;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1em;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a:hover {
+  background: #000000;
+  transition: 0.5s;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+.nav-active {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    margin-top: 40vh;
+  }
+
+  nav,
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+    line-height: 50px;
+  }
+
+  .logo {
+    width: 4.375em;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+  main {
+    margin-top: 60vh;
+  }
+
+  nav ul li {
+    margin-bottom: 20px;
+  }
+
+  .miFoto {
+    margin-bottom: -3em !important;
+  }
+
+  .caja,
+  .caja2 {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  main {
+    margin-top: 80vh;
+  }
+
+  nav ul li {
+    margin-bottom: 30px;
+  }
+}
+
+/* Main y Section */
+
+/* Section 1 */
+.miSection1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.miFoto {
+  border-radius: 50%;
+  transform: scale(0.6);
+  margin-bottom: -5em;
+  max-width: 100%;
+  height: auto;
+}
+
+.titulos {
+  margin-bottom: 0.625em;
+  font-size: 1.5em;
+}
+
+.contenidoInicio {
+  text-align: center;
+}
+
+.parrafos {
+  font-size: 1.2em;
+}
+
+.caja {
+  max-width: 30em;
+  margin: auto;
+  padding: 1.25em;
+}
+
+.boton-descarga {
+  display: inline-block;
+  padding: 0.625em 1.25em;
+  background-color: #008CBA;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1.25em;
+  font-size: 1em;
+  text-align: center;
+}
+
+/* Section 2 */
+.miSection2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-bottom: -18.75em;
+}
+
+.contenidoContacto {
+  text-align: center;
+  background-color: #008CBA;
+  border-radius: 0.625em;
+  padding: 1.25em;
+  border: 0.063em solid #fff8f8;
+  color: white;
+}
+
+.caja2 {
+  max-width: 30em;
+  margin: auto;
+  padding: 1.25em;
+}
+
+.red-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25em;
+}
+
+.red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 1.875em;
+  height: 1.875em;
+  line-height: 1.875em;
+  color: #fff;
+  margin-right: 0.938em;
+  background-color: #008CBA;
+  text-align: center;
+}
+
+.red-social a:hover {
+  color: #000101;
+}
+
+/* Pie de página */
+.grupo-2 {
+  background-color: #008CBA;
+  padding: 0.938em 0.625em;
+  text-align: center;
+  color: #fff;
+}
+
+.grupo-2 small {
+  font-size: 0.938em;
+}
+
+/* Variables */
+:root {
+  --transition-duration: 0.3s;
+  --transition-timing: ease;
+  --button-size: 25px;
+  --button-color: #1f1f1f;
+  --button-hover-color: #000;
+  --icon-size: 25px;
+}
+
+/* Botón de modo nocturno */
+.boton-modo-nocturno {
+  position: relative;
+  width: var(--button-size);
+  height: var(--button-size);
+  border: none;
+  border-radius: 50%;
+  background-color: var(--button-color);
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color var(--transition-duration) var(--transition-timing);
+}
+
+.boton-modo-nocturno:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Iconos de luna y sol */
+.icono-luna,
+.icono-sol {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--icon-size);
+  height: var(--icon-size);
+  line-height: var(--icon-size);
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  clip-path: circle(50% at 50% 50%);
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.icono-luna {
+  left: 3px;
+  background-image: url("/img/luna.png");
+}
+
+.icono-sol {
+  right: 3px;
+  background-image: url("/img/sol.png");
+  transform: translateX(100%);
+}
+
+/* Transiciones de iconos en hover */
+.boton-modo-nocturno:hover .icono-luna {
+  transform: translateX(-100%);
+}
+
+.boton-modo-nocturno:hover .icono-sol {
+  transform: translateX(0);
+}
+
+/* Iconos de luna y sol */
+.icono-luna,
+.icono-sol {
+  position: absolute;
+  top: 50%;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  line-height: var(--icon-size);
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  clip-path: circle(50% at 50% 50%);
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.icono-luna {
+  left: 3px;
+  background-image: url("/img/luna.png");
+}
+
+.icono-sol {
+  right: 3px;
+  background-image: url("/img/sol.png");
+  transform: translateX(100%);
+}
+
+/* Transiciones de iconos en hover */
+.boton-modo-nocturno:hover .icono-luna {
+  transform: translateX(-100%);
+}
+
+.boton-modo-nocturno:hover .icono-sol {
+  transform: translateX(0);
+}
+
+
+/* Estilos para el modo nocturno */
+
+.modo-nocturno {
+  background: url("/img/fondo\ noche.png");
+  color: #fff; /* Texto blanco */
+}
+
+.modo-nocturno nav {
+  background-color: #111; /* Fondo oscuro para el panel de navegación */
+}
+
+.modo-nocturno nav ul li a {
+  color: #fff; /* Texto blanco para los enlaces del panel de navegación */
+}
+
+.modo-nocturno .miSection1 {
+  color: #fff; /* Texto blanco para la sección 1 */
+}
+
+.modo-nocturno .boton-descarga{
+  background-color: #111;
+}
+
+.modo-nocturno .miSection2 {
+  color: #fff; /* Texto blanco para la sección 2 */
+}
+
+.modo-nocturno .contenidoContacto{
+  background-color: #111; /* fondo para el cuadro de texto*/
+}
+
+.modo-nocturno .red-social a {
+  background-color: #111; /* Fondo oscuro para los íconos de redes sociales */
+  color: #fff; /* Texto blanco para los íconos de redes sociales */
+}
+
+.modo-nocturno .grupo-2  {
+  background-color: #111; /* Fondo oscuro para el pie de página */
+  color: #fff; /* Texto blanco para el pie de página */
+}
+
+.modo-nocturno  a:hover{ /*Sombreado */
+  background: #ee0404;
+  transition: .5s;
+}
+
+.modo-nocturno .red-social a {
+  background-color: #111; /* Mantener el fondo negro de los iconos de redes */
+}
+
+.modo-nocturno .red-social a:hover {
+  color: #ee0404; /* Cambiar el color de los iconos al hacer hover */
+}
+
+.modo-nocturno .icono-luna {
+  transform: translateX(-25px);
+}
+
+.modo-nocturno .icono-sol {
+  transform: translateX(0);
+}
