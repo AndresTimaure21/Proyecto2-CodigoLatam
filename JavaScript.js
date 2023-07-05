@@ -32,3 +32,18 @@ const navSlide = () => {
 navSlide();
 
 //console.log(burger); // Verificar si el elemento .burger está siendo seleccionado correctamente
+
+if (window.localStorage) {
+  // localStorage es compatible
+  // Realiza acciones utilizando localStorage
+} else {
+  // localStorage no es compatible
+  // Proporciona una funcionalidad alternativa o informa al usuario
+}
+
+if (navigator.userAgentData) {
+  const userAgentData = navigator.userAgentData;
+  // Accede a la información del agente de usuario utilizando userAgentData
+} else {
+  // Utiliza una técnica alternativa para obtener información del agente de usuario
+}
